@@ -30,6 +30,8 @@
             if(empty($_POST["prod_id"])){
                 if(is_array($datos)==true and count($datos)==0){
                     $producto->insert_producto($_POST["prod_nom"]);
+                    echo("<script>console.log('PHP: " . $producto . "');</script>");
+                    
                 }
             }else{
                 $producto->update_producto($_POST["prod_id"],$_POST["prod_nom"]);

@@ -4,7 +4,7 @@
 
         protected function Conexion(){
             try{
-                $conectar = $this->dbh = new PDO("mysql:local=localhost;dbname=crud2","root","");
+                $conectar = $this->dbh = new PDO("mysql:local=localhost;dbname=crud2","usuario","0x0sidewinder");
                 return $conectar;
             }catch(Exception $e){
                 print "¡Error BD!: " . $e->getMessage() . "<br/>";

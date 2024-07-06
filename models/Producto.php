@@ -41,7 +41,11 @@
             $sql=$conectar->prepare($sql);
             $sql->bindValue(1,$prod_nom);
             $sql->execute();
-            return $resultado=$sql->fetchAll();
+            $resultado=$sql->fetchAll();
+            echo("<script>console.log('PHP: " . $resultado . "');</script>");
+            return $resultado;
+
+
         }
 
         public function update_producto($prod_id,$prod_nom){
